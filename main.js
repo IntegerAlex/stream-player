@@ -1,5 +1,5 @@
 
-
+import axios from 'axios';
   const audioPlayer = document.getElementById('audioPlayer');
   const audioUrl = 'https://35.244.24.37/stream?id=test';
 
@@ -15,7 +15,7 @@ export function search() {
   console.log(query.value);
 
   if (query.value !== "") {
-    fetch.post('https://35.244.24.37/search?searchQuery=' + query.value + '&id=test')
+    axios.post('https://35.244.24.37/search?searchQuery=' + query.value + '&id=test')
     
     
     .then(response => {
@@ -32,7 +32,7 @@ export function search() {
   
   // stream function
 export function stream() {
-  fetch.get(audioUrl, {
+  axios.get(audioUrl, {
     headers: { 'Range': 'bytes=0-' },
     responseType: 'blob'
   })
