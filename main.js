@@ -1,7 +1,7 @@
 
 import axios from 'axios';
   const audioPlayer = document.getElementById('audioPlayer');
-  const audioUrl = 'https://35.244.24.37/stream?id=test';
+  const audioUrl = 'http://35.244.24.37/stream?id=test';
 
   // Make a range request to stream a specific portion of the file
   
@@ -15,7 +15,7 @@ export function search() {
   console.log(query.value);
 
   if (query.value !== "") {
-    axios.post('https://35.244.24.37/search?searchQuery=' + query.value + '&id=test')
+    axios.post('http://35.244.24.37/search?searchQuery=' + query.value + '&id=test')
     
     
     .then(response => {
