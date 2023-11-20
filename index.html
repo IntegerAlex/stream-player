@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Audio Streaming Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <div class="music-player">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for song...">
+            <button id="searchButton">Search</button>
+        </div>
+        <h1 style="background-color: orange;">Audio Streaming Test</h1>
+        <div class="thumbnail">
+            <img src="images.png" alt="Album Thumbnail">
+        </div>
+        <div class="details">
+            <h2>Song Title</h2>
+            <p>Artist Name</p>
+        </div>
+        <audio controls id="audioPlayer">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script type="module" src="main.js"></script>
+
+</body>
+</html>
