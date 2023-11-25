@@ -1,7 +1,9 @@
 
-import axios from 'axios';
+// import axios from 'axios';
+import axios from 'https://cdn.jsdelivr.net/npm/axios@1.6.2/+esm'
+
   const audioPlayer = document.getElementById('audioPlayer');
-  const audioUrl = 'http://35.244.24.37/stream?id=test';
+  const audioUrl = 'https://xstreambackend.com/stream?id=test';
 
   // Make a range request to stream a specific portion of the file
   
@@ -15,7 +17,7 @@ export function search() {
   console.log(query.value);
 
   if (query.value !== "") {
-    axios.post('http://35.244.24.37/search?searchQuery=' + query.value + '&id=test')
+    axios.post('https://xstreambackend.com/search?searchQuery=' + query.value + '&id=test')
     
     
     .then(response => {
@@ -25,7 +27,7 @@ export function search() {
       console.error('Search error:', error);
     });
 
-    setTimeout(stream, 10000);
+    setTimeout(stream, 3000);
 
   }
 }
