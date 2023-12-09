@@ -1,7 +1,5 @@
-
-// import axios from 'axios';
 import axios from 'https://cdn.jsdelivr.net/npm/axios@1.6.2/+esm'
-
+// import axios from 'axios';
   const audioPlayer = document.getElementById('audioPlayer');
   const audioUrl = 'https://xstreambackend.com/stream?id=test';
 
@@ -27,8 +25,7 @@ export function search() {
       console.error('Search error:', error);
     });
 
-    setTimeout(stream, 3000);
-
+    setTimeout(stream, 10000);
   }
 }
   
