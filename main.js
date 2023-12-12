@@ -14,8 +14,13 @@ export function search() {
   let query = document.getElementById("searchInput");
   console.log(query.value);
 
+  let id = localStorage.getItem("id")
+  if(id == null){
+    id = "test"
+  }
+
   if (query.value !== "") {
-    axios.post('https://xstreambackend.com/search?searchQuery=' + query.value + '&id=test')
+    axios.post('https://xstreambackend.com/search?searchQuery=' + query.value + `&id=${id}`)
     
     
     .then(response => {
@@ -41,7 +46,7 @@ export function stream() {
   })
   .catch(error => console.error('Axios error:', error));
 }
-  
+
 
 
 

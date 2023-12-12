@@ -9,6 +9,8 @@
 
 </head>
 <body>
+    
+    <!-- <a href="/login.html">login</a> -->
     <div class="music-player">
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Search for song...">
@@ -27,6 +29,12 @@
         </audio>
         <!-- <p style="position: relative;height: max-content; color:azure;" >BETA access closed</p> -->
     </div>
+    <script >
+        if(localStorage.getItem("id") == null){
+            alert("You are not logged in");
+            window.location.href = "/login.html";
+        }
+    </script>
     <script type="module" src="main.js"></script>
 
 </body>
