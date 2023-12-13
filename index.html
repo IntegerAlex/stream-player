@@ -16,6 +16,9 @@
             <input type="text" id="searchInput" placeholder="Search for song...">
             <button id="searchButton">Search</button>
         </div>
+        <div class="progress-container">
+            <div class="progress" id="progress-bar" data-done="0"></div>
+          </div>
         <h1 style="background-color: orange;">Audio Streaming Test</h1>
         <div class="thumbnail">
             <img src="images.png" alt="Album Thumbnail">
@@ -27,8 +30,32 @@
         <audio controls id="audioPlayer">
             Your browser does not support the audio element.
         </audio>
-        <!-- <p style="position: relative;height: max-content; color:azure;" >BETA access closed</p> -->
+        <!-- <p style="position: relative; display: inline-block; padding: 10px; background-color: #3498db; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px; font-weight: bold; border-radius: 5px;" >BETA access closed</p> -->
     </div>
+
+
+
+    <!-- <p id="betaMessage" style="position: relative; display: inline-block; padding: 10px; background-color: #3498db; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px; font-weight: bold; border-radius: 5px; cursor: pointer;" onclick="coolEffect()">BETA access closed</p>
+
+    <script>
+    var clickCount = 0;
+    
+    function coolEffect() {
+      var betaMessage = document.getElementById('betaMessage');
+    
+      // Define an array of colors for the alternating effect
+      var colors = ['#3498db', '#e74c3c', '#27ae60', '#f39c12'];
+    
+      // Change the background color to the next one in the array
+      betaMessage.style.backgroundColor = colors[clickCount % colors.length];
+    
+      // Increment the click count for the next color in the array
+      clickCount++;
+    }
+    </script> -->
+    
+</script>
+
     <script >
         if(localStorage.getItem("id") == null){
             alert("You are not logged in");

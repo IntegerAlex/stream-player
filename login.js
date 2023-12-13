@@ -13,7 +13,8 @@ function login(){
   .then(response => {
     console.log(response.data.status);  
     if (response.data.status) {
-      localStorage.setItem("id", response.data.session);
+      localStorage.setItem("id", response.data.session)
+      localStorage.setItem("uid", response.data.uid);
       alert("Login Successful");
       window.location.href = "https://xstreamusic.com/index.html";
     }
